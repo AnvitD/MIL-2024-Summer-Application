@@ -38,6 +38,8 @@ for sku, item in inventory.get_inventory():
     quantity = item['quantity']
     part_name = ""
     part_characteristics = ""
+    update_date = part.update.strftime("%Y-%m-%d %H:%M:%S")  # Format the update date and time
+
     if isinstance(part, Resistor):
         part_name = "Resistor"
         part_characteristics = f"Resistance: {part.resistance} ohms, Tolerance: {part.tolerance}%"
@@ -53,7 +55,8 @@ for sku, item in inventory.get_inventory():
     elif isinstance(part, EthernetCable):
         part_name = "Ethernet Cable"
         part_characteristics = f"Alpha Type: {part.alpha_type.value}, Beta Type: {part.beta_type.value}, Speed: {part.ether_speed.value}, Length: {part.length} ft"
-    print(f"SKU: {sku}, Part: {part_name}, Characteristics: {part_characteristics}, Quantity: {quantity}")
+    print(f"SKU: {sku}, Part: {part_name}, Characteristics: {part_characteristics}, Quantity: {quantity}, Last Updated: {update_date}")
+
 
 # Display the usage count graph
 usage_count = defaultdict(int)
