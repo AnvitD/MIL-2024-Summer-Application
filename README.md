@@ -3,14 +3,6 @@
 To test the functionality of the Inventory Management System, you have two options:
 
 1.MIL_Summer_app: Run MIL_Summer_app.py, which provides a user-friendly menu interface with eight options:
-Add Part
-Add Inventory
-Get Quantity
-Get Inventory
-Search
-Delete Part
-Show Graph
-Exit
 
 I recommend to run MIL_Summer_app.py first to see the main code. However, this may be tedious as you have to add parts before you
 can call some functions such as get_inventory or search. 
